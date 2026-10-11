@@ -9,223 +9,256 @@
 <meta property="og:description" content="Seu estilo. Nossa assinatura. Conheça a Mustazo e agende seu próximo corte ou barboterapia em Novo Hamburgo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#f7f3ec;--paper:#faf7f2;--ink:#1a140e;--dim:#6b5d4f;--gold:#a8823a;--gold-l:#c9a227;--rule:rgba(26,20,14,.14)}
+:root{
+  --orange:#FF5A1F;--orange-dark:#E84E1B;
+  --dark:#111111;--dark2:#1a1a1a;
+  --cream:#F4F1EC;--cream2:#F6F4EF;
+  --white:#FFFFFF;
+  --ink:#111111;--dim:#666666;--dim2:#888888;
+  --rule:rgba(17,17,17,.12);
+}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Lora',serif;background:var(--cream);color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1060px;margin:0 auto;padding:0 32px}
-h1,h2,h3{font-family:'Playfair Display',serif;font-weight:900}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-.5px;font-weight:400}
 svg{display:block}
-.nav{padding:26px 0;display:flex;justify-content:space-between;align-items:center}
-.nav .lg{font-family:'Playfair Display';font-size:1.15rem;font-weight:900;letter-spacing:.5px;text-decoration:none;color:var(--ink)}
-.nav .lg span{color:var(--gold)}
-.nav .lk{display:flex;gap:26px;align-items:center}
-.nav .lk a{color:var(--dim);text-decoration:none;font-size:.8rem;text-transform:uppercase;letter-spacing:1.8px;transition:.2s}
-.nav .lk a:hover{color:var(--ink)}
-.nav .lk a.cta{border:1px solid var(--ink);color:var(--ink);padding:10px 20px}
-.nav .lk a.cta:hover{background:var(--ink);color:var(--cream)}
-.hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.42) sepia(.18)}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(26,20,14,.25),rgba(26,20,14,.72))}
-.hero .in{position:relative;z-index:2;padding:90px 32px;max-width:780px}
-.hero .k{font-size:.62rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold-l);margin-bottom:26px}
-.hero h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.04;margin-bottom:26px;color:var(--paper)}
-.hero h1 i{color:var(--gold-l)}
-.hero p{color:rgba(250,247,242,.88);font-size:1.12rem;font-style:italic;margin-bottom:38px}
-.hero .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-block;background:var(--ink);color:var(--cream);padding:16px 36px;text-decoration:none;text-transform:uppercase;letter-spacing:2.5px;font-size:.7rem;transition:.25s}
-.btn:hover{background:var(--gold);color:var(--ink)}
-.btn.ghost{background:transparent;border:1px solid rgba(250,247,242,.5);color:var(--paper)}
-.btn.ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.marq{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:20px 0;overflow:hidden;white-space:nowrap;background:var(--paper)}
-.marq span{display:inline-block;font-family:'Playfair Display';font-size:1.05rem;letter-spacing:3px;text-transform:uppercase;animation:scroll 30s linear infinite}
-.marq i{color:var(--gold);font-style:normal;margin:0 28px}
+
+/* HEADER BRANCO */
+.header{background:var(--white);padding:22px 0;border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:70}
+.header .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mk{font-family:'Archivo Black';font-size:1.5rem;color:var(--ink);letter-spacing:-1px}
+.logo .sb{font-size:.58rem;letter-spacing:4px;text-transform:uppercase;color:var(--dim);margin-top:2px}
+.nav{display:flex;gap:30px;align-items:center}
+.nav a{color:var(--ink);text-decoration:none;font-size:.82rem;font-weight:500;transition:.2s}
+.nav a:hover{color:var(--orange)}
+.nav a.cta{background:var(--orange);color:var(--ink);padding:13px 24px;font-size:.7rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+.nav a.cta:hover{background:var(--ink);color:var(--white)}
+
+/* HERO ESCURO */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.38) sepia(.15)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,17,17,.85) 0%,rgba(17,17,17,.4) 55%,rgba(17,17,17,.15) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero .in{max-width:640px}
+.hero .k{display:flex;align-items:center;gap:12px;font-size:.62rem;letter-spacing:4px;text-transform:uppercase;color:var(--white);margin-bottom:24px;font-weight:500}
+.hero .k::before{content:"";width:32px;height:2px;background:var(--orange)}
+.hero h1{font-size:clamp(3rem,9vw,6.5rem);line-height:.9;color:var(--white);margin-bottom:20px;letter-spacing:-3px}
+.hero h1 .sub{display:block;font-size:clamp(1.4rem,3.5vw,2.4rem);font-family:'Inter';font-weight:700;text-transform:none;letter-spacing:-1px;margin-top:10px}
+.hero h1 .sub i{color:var(--orange);font-style:normal}
+.hero p{color:rgba(255,255,255,.8);font-size:1.05rem;margin-bottom:36px;max-width:480px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:var(--ink);padding:17px 32px;text-decoration:none;font-size:.72rem;text-transform:uppercase;letter-spacing:2px;font-weight:700;transition:.25s}
+.btn:hover{background:var(--white);color:var(--ink);transform:translateY(-2px)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.4);color:var(--white)}
+.btn.ghost:hover{background:var(--white);color:var(--ink);border-color:var(--white)}
+.hero .check{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:.82rem}
+.hero .check svg{color:var(--orange)}
+.hero .vert{position:absolute;right:40px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-size:.62rem;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.hero .loc{position:absolute;bottom:30px;right:40px;display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.6);font-size:.72rem;letter-spacing:1px;text-transform:uppercase}
+.hero .loc svg{color:var(--orange)}
+
+/* MARQUEE LARANJA */
+.marq{background:var(--orange);padding:16px 0;overflow:hidden;white-space:nowrap}
+.marq span{display:inline-block;font-family:'Archivo Black';font-size:.95rem;letter-spacing:2px;text-transform:uppercase;color:var(--ink);animation:scroll 28s linear infinite}
+.marq i{font-style:normal;margin:0 24px;font-size:.8rem}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECOES */
 .sec{padding:100px 0}
-.sec .cap{text-align:center;margin-bottom:60px}
-.sec .cap .k{font-size:.6rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px}
-.sec .cap h2{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin-bottom:20px}
-.sec .cap h2 i{color:var(--gold)}
-.sec .cap p{color:var(--dim);max-width:580px;margin:0 auto;font-size:1.05rem}
-.sec .cap .ln{width:46px;height:1px;background:var(--gold);margin:24px auto 0}
-.svc{display:flex;flex-direction:column;gap:0;max-width:760px;margin:0 auto}
-.svc .it{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--rule);min-height:340px}
-.svc .it:first-child{border-top:1px solid var(--rule)}
-.svc .it .im{overflow:hidden}
-.svc .it .im img{width:100%;height:100%;object-fit:cover;filter:sepia(.22);transition:.6s}
-.svc .it:hover .im img{filter:sepia(0);transform:scale(1.04)}
-.svc .it .tx{padding:56px 48px;display:flex;flex-direction:column;justify-content:center}
-.svc .it .tx .tag{font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.svc .it .tx h3{font-size:1.7rem;margin-bottom:12px}
-.svc .it .tx p{color:var(--dim);font-size:.98rem;margin-bottom:24px}
-.svc .it .tx .price{font-family:'Playfair Display';font-size:1.5rem;font-weight:900;color:var(--ink);margin-bottom:20px}
-.svc .it .tx .price small{font-size:.72rem;color:var(--dim);font-family:'Lora';font-weight:400}
-.svc .it .tx a{color:var(--ink);text-decoration:none;font-size:.7rem;text-transform:uppercase;letter-spacing:2.5px;border-bottom:1px solid var(--gold);padding-bottom:4px;align-self:flex-start;transition:.2s}
-.svc .it .tx a:hover{color:var(--gold);border-color:var(--gold)}
-.ess{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.sec.dark{background:var(--dark);color:var(--white)}
+.sec.cream{background:var(--cream2)}
+.sec-head{margin-bottom:60px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.sec-head .k{font-size:.62rem;letter-spacing:4px;text-transform:uppercase;color:var(--orange);font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.sec-head .k::before{content:"";width:24px;height:2px;background:var(--orange)}
+.sec-head h2{font-size:clamp(2rem,5vw,3.4rem);line-height:1;letter-spacing:-1.5px}
+.sec-head h2 i{color:var(--orange)}
+.sec-head .note{color:var(--dim);font-size:.98rem;max-width:380px;line-height:1.6}
+.sec.dark .sec-head .note{color:var(--dim2)}
+
+/* SERVICOS */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.svc-card{background:var(--white);border:1px solid var(--rule);overflow:hidden;transition:.25s}
+.svc-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(17,17,17,.08)}
+.svc-card .im{position:relative;aspect-ratio:1;overflow:hidden}
+.svc-card .im img{width:100%;height:100%;object-fit:cover;filter:sepia(.2);transition:.5s}
+.svc-card:hover .im img{filter:sepia(0);transform:scale(1.05)}
+.svc-card .im .tag{position:absolute;bottom:14px;left:14px;background:var(--white);color:var(--ink);padding:7px 14px;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+.svc-card .tx{padding:30px 28px}
+.svc-card .tx .num{font-size:.72rem;color:var(--dim2);letter-spacing:2px;margin-bottom:8px}
+.svc-card .tx h3{font-size:1.25rem;margin-bottom:10px;letter-spacing:-.5px}
+.svc-card .tx p{color:var(--dim);font-size:.9rem;margin-bottom:20px}
+.svc-card .tx .price{font-family:'Archivo Black';font-size:1.4rem;color:var(--ink);margin-bottom:18px}
+.svc-card .tx .price small{font-size:.65rem;color:var(--dim);font-family:'Inter';font-weight:400;letter-spacing:0;text-transform:none}
+.svc-card .tx a{color:var(--ink);text-decoration:none;font-size:.68rem;text-transform:uppercase;letter-spacing:2px;font-weight:600;display:inline-flex;align-items:center;gap:8px;border-bottom:1px solid var(--orange);padding-bottom:4px;transition:.2s}
+.svc-card .tx a:hover{color:var(--orange)}
+
+/* ESSENCIA */
 .ess .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.ess .im{aspect-ratio:4/5;overflow:hidden}
+.ess .im{aspect-ratio:4/5;overflow:hidden;position:relative}
 .ess .im img{width:100%;height:100%;object-fit:cover;filter:sepia(.25)}
-.ess .tx h2{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.12;margin-bottom:22px}
-.ess .tx h2 i{color:var(--gold)}
-.ess .tx p{color:var(--dim);margin-bottom:18px;font-size:1.02rem}
-.ess .tx ul{list-style:none;margin-top:28px}
-.ess .tx li{padding:12px 0;border-bottom:1px solid var(--rule);font-size:.95rem;color:var(--dim);display:flex;gap:14px;align-items:center}
-.ess .tx li:last-child{border-bottom:none}
-.ess .tx li::before{content:"";width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex-shrink:0}
+.ess .im .badge{position:absolute;bottom:20px;left:20px;background:var(--orange);color:var(--ink);padding:12px 22px;font-size:.68rem;text-transform:uppercase;letter-spacing:2px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+.ess .tx .k{font-size:.62rem;letter-spacing:4px;text-transform:uppercase;color:var(--orange);font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.ess .tx .k::before{content:"";width:24px;height:2px;background:var(--orange)}
+.ess .tx h2{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.1;margin-bottom:22px;letter-spacing:-1px}
+.ess .tx h2 i{color:var(--orange)}
+.ess .tx p{color:var(--dim);margin-bottom:16px;font-size:1rem}
+.ess .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.ess .grid .gi{display:flex;align-items:center;gap:14px}
+.ess .grid .gi .ic{width:40px;height:40px;border:1px solid var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--orange);flex-shrink:0}
+.ess .grid .gi .t{font-size:.85rem;font-weight:600}
+.ess .tx .btn{margin-top:30px}
+
+/* GALERIA ESCURA */
 .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.gal div{aspect-ratio:3/4;overflow:hidden}
-.gal img{width:100%;height:100%;object-fit:cover;filter:sepia(.28);transition:.5s}
-.gal div:hover img{filter:sepia(0);transform:scale(1.05)}
-.team{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.tgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
-.tgrid .m{text-align:center}
-.tgrid .m .ph{aspect-ratio:3/4;overflow:hidden;margin-bottom:16px}
-.tgrid .m .ph img{width:100%;height:100%;object-fit:cover;filter:sepia(.3);transition:.5s}
-.tgrid .m:hover .ph img{filter:sepia(0)}
-.tgrid .m .n{font-weight:700;font-size:1rem}
-.tgrid .m .r{color:var(--dim);font-size:.78rem}
+.gal div{aspect-ratio:3/4;overflow:hidden;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.85);transition:.5s}
+.gal div:hover img{filter:grayscale(0) brightness(1);transform:scale(1.05)}
+.gal div::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(17,17,17,.5));opacity:0;transition:.3s}
+.gal div:hover::after{opacity:1}
+
+/* TIME */
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.team .m{text-align:center}
+.team .m .ph{aspect-ratio:3/4;overflow:hidden;margin-bottom:14px}
+.team .m .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:.5s}
+.team .m:hover .ph img{filter:grayscale(0)}
+.team .m .n{font-weight:700;font-size:.95rem}
+.team .m .r{color:var(--dim);font-size:.75rem}
+
+/* LOCAL */
 .local .wrap{text-align:center}
-.local .addr{margin:34px 0 44px}
-.local .addr .rua{font-family:'Playfair Display';font-size:1.5rem;font-weight:900;margin-bottom:8px}
+.local .addr{margin:30px 0 40px}
+.local .addr .rua{font-family:'Archivo Black';font-size:1.6rem;letter-spacing:-.5px;margin-bottom:8px}
 .local .addr .cid{color:var(--dim);font-size:1rem}
-.local .map{border:1px solid var(--rule);height:360px;overflow:hidden;margin-bottom:40px}
-.local .map iframe{width:100%;height:100%;border:0;filter:grayscale(.35)}
-.local .hrs{display:inline-block;text-align:left}
-.local .hrs .hr{display:flex;justify-content:space-between;gap:60px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:.95rem}
+.local .map{border:1px solid var(--rule);height:340px;overflow:hidden;margin-bottom:40px}
+.local .map iframe{width:100%;height:100%;border:0;filter:grayscale(.3)}
+.local .hrs{display:inline-block;text-align:left;background:var(--cream2);padding:30px 40px}
+.local .hrs h3{font-size:1.1rem;margin-bottom:18px;letter-spacing:-.5px}
+.local .hrs .hr{display:flex;justify-content:space-between;gap:60px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:.92rem}
 .local .hrs .hr:last-child{border-bottom:none}
-.local .hrs .hr span:first-child{color:var(--dim);text-transform:uppercase;font-size:.68rem;letter-spacing:2px}
-.local .hrs .hr .cl{color:var(--gold);font-style:italic}
-.local .tel{display:block;margin-top:26px;font-family:'Playfair Display';font-size:1.3rem;font-weight:900;color:var(--ink);text-decoration:none}
-.local .tel:hover{color:var(--gold)}
-.cta-final{text-align:center;padding:110px 0;background:var(--paper);border-top:1px solid var(--rule)}
-.cta-final h2{font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.1;margin-bottom:20px}
-.cta-final h2 i{color:var(--gold)}
-.cta-final p{color:var(--dim);margin-bottom:36px;font-size:1.05rem}
-footer{background:var(--ink);color:var(--cream);padding:60px 0;text-align:center}
-footer .lg{font-family:'Playfair Display';font-size:1.7rem;font-weight:900;margin-bottom:10px}
-footer .lg span{color:var(--gold-l)}
-footer .cn{color:var(--dim);font-size:.78rem;margin-bottom:26px}
-footer .brands{display:flex;justify-content:center;gap:40px;margin-bottom:26px;flex-wrap:wrap}
-footer .brands span{font-size:.66rem;letter-spacing:3px;text-transform:uppercase;color:var(--dim)}
-footer .r{color:var(--dim);font-size:.72rem}
-footer .r a{color:var(--dim);text-decoration:none}
-footer .r a:hover{color:var(--gold-l)}
-@media(max-width:860px){
-.nav .lk a:not(.cta){display:none}
-.svc .it{grid-template-columns:1fr;min-height:auto}
-.svc .it .im{height:280px}
-.svc .it .tx{padding:40px 26px}
+.local .hrs .hr span:first-child{color:var(--dim);text-transform:uppercase;font-size:.65rem;letter-spacing:2px}
+.local .hrs .hr .cl{color:var(--orange);font-style:italic}
+.local .tel{display:block;margin-top:24px;font-family:'Archivo Black';font-size:1.3rem;color:var(--ink);text-decoration:none}
+.local .tel:hover{color:var(--orange)}
+
+/* CTA LARANJA */
+.cta-final{background:var(--orange);padding:90px 0;text-align:center}
+.cta-final h2{font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;color:var(--ink);margin-bottom:18px;letter-spacing:-1.5px}
+.cta-final h2 i{color:var(--white)}
+.cta-final p{color:rgba(17,17,17,.7);margin-bottom:34px;font-size:1.05rem}
+.cta-final .btn{background:var(--ink);color:var(--white)}
+.cta-final .btn:hover{background:var(--white);color:var(--ink)}
+
+/* FOOTER */
+footer{background:var(--dark);color:var(--white);padding:50px 0;text-align:center}
+footer .lg{font-family:'Archivo Black';font-size:1.5rem;letter-spacing:-.5px;margin-bottom:8px}
+footer .lg span{color:var(--orange)}
+footer .cn{color:var(--dim2);font-size:.78rem;margin-bottom:24px}
+footer .brands{display:flex;justify-content:center;gap:40px;margin-bottom:24px;flex-wrap:wrap}
+footer .brands span{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--dim2);font-weight:600}
+footer .r{color:var(--dim2);font-size:.7rem}
+
+@media(max-width:900px){
+.nav a:not(.cta){display:none}
+.hero .vert,.hero .loc{display:none}
 .ess .wrap{grid-template-columns:1fr;gap:40px}
+.svc{grid-template-columns:1fr 1fr}
 .gal{grid-template-columns:1fr 1fr}
-.tgrid{grid-template-columns:repeat(3,1fr)}
+.team{grid-template-columns:repeat(3,1fr)}
 .sec{padding:64px 0}
-.hero .in{padding:60px 24px}
 }
-@media(max-width:520px){.gal,.tgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.svc,.gal{grid-template-columns:1fr}.team{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 
 <div class="wrap">
+<div class="header">
+<a href="#" class="logo"><span class="mk">MUSTAZO</span><span class="sb">BARBEARIAS</span></a>
 <nav class="nav">
-<a href="#" class="lg">MUSTAZO <span>.</span></a>
-<div class="lk">
 <a href="#servicos">Serviços</a>
 <a href="#essencia">A Mustazo</a>
 <a href="#estilos">Estilos</a>
 <a href="#time">Time</a>
 <a href="#localizacao">Localização</a>
-<a href="https://wa.me/5551998447221?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mustazo%20Novo%20Hamburgo%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="cta">Agendar</a>
-</div>
+<a href="https://wa.me/5551998447221?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mustazo%20Novo%20Hamburgo%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="cta">Agendar ↗</a>
 </nav>
+</div>
 </div>
 
 <section class="hero">
-<img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=1800&q=80" alt="Equipe Mustazo atendendo clientes">
-<div class="in">
+<img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=1800&q=80" alt="Barbearia Mustazo">
+<div class="wrap"><div class="in">
 <div class="k">Barbearia em Novo Hamburgo</div>
-<h1>Seu estilo.<br><i>Nossa assinatura.</i></h1>
+<h1>MUSTAZO.<span class="sub">Seu estilo. <i>Nossa assinatura.</i></span></h1>
 <p>Mais do que um corte, um momento seu. Técnica, personalidade e cuidado em cada detalhe.</p>
 <div class="btns">
-<a href="https://wa.me/5551998447221?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mustazo%20Novo%20Hamburgo%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="btn">Agendar meu horário</a>
-<a href="#servicos" class="btn ghost">Conhecer os serviços</a>
+<a href="https://wa.me/5551998447221?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mustazo%20Novo%20Hamburgo%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="btn">Agendar meu horário ↗</a>
+<a href="#servicos" class="btn ghost">Conhecer os serviços →</a>
 </div>
-</div>
+<div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Atendimento personalizado. Estilo de verdade.</div>
+</div></div>
+<div class="vert">CABELO • BARBA • IDENTIDADE</div>
+<div class="loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Vila Rosa, Novo Hamburgo ↓</div>
 </section>
 
-<div class="marq"><span>PRECISÃO NO CORTE <i>◆</i> PERSONALIDADE NO ESTILO <i>◆</i> CUIDADO EM CADA DETALHE <i>◆</i> ISSO É MUSTAZO <i>◆</i> PRECISÃO NO CORTE <i>◆</i> PERSONALIDADE NO ESTILO <i>◆</i> CUIDADO EM CADA DETALHE <i>◆</i> ISSO É MUSTAZO <i>◆</i></span></div>
+<div class="marq"><span>PRECISÃO NO CORTE <i>✂</i> PERSONALIDADE NO ESTILO <i>✂</i> CUIDADO EM CADA DETALHE <i>✂</i> ISSO É MUSTAZO <i>✂</i> PRECISÃO NO CORTE <i>✂</i> PERSONALIDADE NO ESTILO <i>✂</i> CUIDADO EM CADA DETALHE <i>✂</i> ISSO É MUSTAZO <i>✂</i></span></div>
 
 <section class="sec" id="servicos"><div class="wrap">
-<div class="cap"><span class="k">O que fazemos</span><h2>Seu próximo visual<br><i>começa aqui.</i></h2>
-<p>Do clássico ao contemporâneo. Encontre o cuidado que combina com você.</p></div>
+<div class="sec-head"><div><span class="k">O que fazemos</span><h2>Seu próximo visual<br><i>começa aqui.</i></h2></div>
+<p class="note">Do clássico ao contemporâneo. Encontre o cuidado que combina com você.</p></div>
 <div class="svc">
-<div class="it">
-<div class="im"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80" alt="Corte Casa na Mustazo"></div>
-<div class="tx">
-<span class="tag">Identidade</span>
-<h3>Corte Casa</h3>
-<p>Seu estilo, na medida certa. Corte personalizado e finalização com atenção a cada detalhe.</p>
-<div class="price">R$ 60 <small>/ a partir de</small></div>
-<a href="https://wa.me/5551998447221?text=Quero%20agendar%20Corte%20Casa">Agendar serviço</a>
+<div class="svc-card">
+<div class="im"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=700&q=80" alt="Corte Casa"><span class="tag">Identidade</span></div>
+<div class="tx"><div class="num">01</div><h3>Corte Casa</h3><p>Seu estilo, na medida certa. Corte personalizado e finalização com atenção a cada detalhe.</p><div class="price">R$ 60 <small>/ a partir de</small></div><a href="https://wa.me/5551998447221?text=Quero%20agendar%20Corte%20Casa">Agendar serviço ↗</a></div>
 </div>
+<div class="svc-card">
+<div class="im"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700&q=80" alt="Barboterapia"><span class="tag">Cuidado</span></div>
+<div class="tx"><div class="num">02</div><h3>Barboterapia</h3><p>Um ritual de cuidado. Modelagem, toalha quente e acabamento para uma barba de respeito.</p><div class="price">R$ 45 <small>/ a partir de</small></div><a href="https://wa.me/5551998447221?text=Quero%20agendar%20Barboterapia">Agendar serviço ↗</a></div>
 </div>
-<div class="it">
-<div class="im"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80" alt="Barboterapia na Mustazo"></div>
-<div class="tx">
-<span class="tag">Cuidado</span>
-<h3>Barboterapia</h3>
-<p>Um ritual de cuidado. Modelagem, toalha quente e acabamento para uma barba de respeito.</p>
-<div class="price">R$ 45 <small>/ a partir de</small></div>
-<a href="https://wa.me/5551998447221?text=Quero%20agendar%20Barboterapia">Agendar serviço</a>
-</div>
-</div>
-<div class="it">
-<div class="im"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=900&q=80" alt="Corte + Barboterapia na Mustazo"></div>
-<div class="tx">
-<span class="tag">Experiência completa</span>
-<h3>Corte + Barboterapia</h3>
-<p>A experiência completa. Cabelo e barba em sintonia para renovar sua presença.</p>
-<div class="price">R$ 95 <small>/ a partir de</small></div>
-<a href="https://wa.me/5551998447221?text=Quero%20agendar%20Corte%20%2B%20Barboterapia">Agendar serviço</a>
-</div>
+<div class="svc-card">
+<div class="im"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=700&q=80" alt="Corte + Barboterapia"><span class="tag">Experiência completa</span></div>
+<div class="tx"><div class="num">03</div><h3>Corte + Barboterapia</h3><p>A experiência completa. Cabelo e barba em sintonia para renovar sua presença.</p><div class="price">R$ 95 <small>/ a partir de</small></div><a href="https://wa.me/5551998447221?text=Quero%20agendar%20Corte%20%2B%20Barboterapia">Agendar serviço ↗</a></div>
 </div>
 </div>
 </div></section>
 
 <section class="sec ess" id="essencia"><div class="wrap">
-<div class="im"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1000&q=80" alt="Atendimento no ambiente da Mustazo"></div>
+<div class="im"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1000&q=80" alt="Ambiente Mustazo"><span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Nossa casa. Seu lugar.</span></div>
 <div class="tx">
-<div class="cap" style="text-align:left;margin-bottom:26px"><span class="k">A essência Mustazo</span>
-<h2>O corte é só<br><i>o começo.</i></h2></div>
+<span class="k">A essência Mustazo</span>
+<h2>O corte é só<br><i>o começo.</i></h2>
 <p>A gente acredita que cuidar do visual também é cuidar de si. Por isso, cada visita à Mustazo une técnica, uma boa conversa e aquele tempo que é só seu.</p>
 <p>Um ambiente acolhedor, um time que entende de estilo e atenção do início ao último detalhe. Chegue, sinta-se em casa e saia ainda mais você.</p>
-<ul>
-<li>Profissionais qualificados</li>
-<li>Cuidado personalizado</li>
-<li>Ambiente acolhedor</li>
-<li>Boa conversa, sempre</li>
-</ul>
+<div class="grid">
+<div class="gi"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="t">Profissionais qualificados</div></div>
+<div class="gi"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6-6.3 4.6L8 13.9 2 9.4h7.6z"/></svg></div><div class="t">Cuidado personalizado</div></div>
+<div class="gi"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14"/></svg></div><div class="t">Ambiente acolhedor</div></div>
+<div class="gi"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div><div class="t">Boa conversa, sempre</div></div>
+</div>
+<a href="https://wa.me/5551998447221?text=Quero%20conhecer%20a%20Mustazo" class="btn">Vem pra Mustazo →</a>
 </div>
 </div></section>
 
-<section class="sec" id="estilos"><div class="wrap">
-<div class="cap"><span class="k">Cortes & estilos</span><h2>Não é só cabelo.<br><i>É identidade.</i></h2>
-<p>Gente real. Estilo próprio. Um pouco do que acontece por aqui.</p></div>
+<section class="sec dark" id="estilos"><div class="wrap">
+<div class="sec-head"><div><span class="k">Cortes & estilos</span><h2>Não é só cabelo.<br><i>É identidade.</i></h2></div>
+<p class="note">Gente real. Estilo próprio. Um pouco do que acontece por aqui.</p></div>
 <div class="gal">
-<div><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=700&q=80" alt="Detalhes"></div>
-<div><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=700&q=80" alt="Estilo"></div>
-<div><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700&q=80" alt="Precisão"></div>
-<div><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700&q=80" alt="Cuidado"></div>
+<div><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80" alt="Estilo 1"></div>
+<div><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=700&q=80" alt="Estilo 2"></div>
+<div><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700&q=80" alt="Estilo 3"></div>
+<div><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700&q=80" alt="Estilo 4"></div>
 </div>
 </div></section>
 
-<section class="sec team" id="time"><div class="wrap">
-<div class="cap"><span class="k">Quem cuida do seu estilo</span><h2>Mãos experientes.<br><i>Pessoas de verdade.</i></h2>
-<p>Conheça o time que faz a experiência Mustazo acontecer.</p></div>
-<div class="tgrid">
+<section class="sec cream" id="time"><div class="wrap">
+<div class="sec-head"><div><span class="k">Quem cuida do seu estilo</span><h2>Mãos experientes.<br><i>Pessoas de verdade.</i></h2></div>
+<p class="note">Conheça o time que faz a experiência Mustazo acontecer.</p></div>
+<div class="team">
 <div class="m"><div class="ph"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80" alt="Lorran"></div><div class="n">Lorran</div><div class="r">Barbeiro</div></div>
 <div class="m"><div class="ph"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80" alt="Aline"></div><div class="n">Aline</div><div class="r">Barbeira</div></div>
 <div class="m"><div class="ph"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=80" alt="John"></div><div class="n">John</div><div class="r">Barbeiro</div></div>
@@ -234,9 +267,8 @@ footer .r a:hover{color:var(--gold-l)}
 </div>
 </div></section>
 
-<section class="sec local" id="localizacao"><div class="wrap">
-<div class="cap"><span class="k">Te esperamos por aqui</span><h2>Seu novo ponto<br><i>de encontro.</i></h2>
-<p>No coração de Vila Rosa, em Novo Hamburgo. Passe por aqui. Vai ser um prazer receber você.</p></div>
+<section class="sec" id="localizacao"><div class="wrap">
+<div class="sec-head"><div><span class="k">Te esperamos por aqui</span><h2>Seu novo ponto<br><i>de encontro.</i></h2></div></div>
 <div class="addr">
 <div class="rua">Rua Avaí, 172 — Vila Rosa</div>
 <div class="cid">Novo Hamburgo — RS · 93315-090</div>
@@ -245,11 +277,27 @@ footer .r a:hover{color:var(--gold-l)}
 <iframe src="https://www.google.com/maps?q=R.+Ava%C3%AD,+172+-+Vila+Rosa,+Novo+Hamburgo+-+RS&output=embed" loading="lazy"></iframe>
 </div>
 <div class="hrs">
+<h3>Horários da casa</h3>
 <div class="hr"><span>Segunda-feira</span><span>14h às 20h</span></div>
 <div class="hr"><span>Terça a sexta</span><span>9h às 20h</span></div>
 <div class="hr"><span>Sábado</span><span>8h às 17h</span></div>
 </div>
 <a href="tel:+5551998447221" class="tel">(51) 99844-7221</a>
+</div></section>
+
+
+<section class="sec" id="contato" style="background:var(--cream2);border-top:1px solid var(--rule)"><div class="wrap">
+<div class="sec-head"><div><span class="k">Fale com a gente</span><h2>Envie uma <i>mensagem.</i></h2></div>
+<p class="note">Preencha o formulário e entraremos em contato. Ou chama direto no WhatsApp.</p></div>
+<div style="max-width:560px;margin:0 auto">
+<form onsubmit="alert('Mensagem enviada! Entraremos em contato em breve.'); return false;" style="display:flex;flex-direction:column;gap:16px">
+<div><label style="display:block;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:7px">Nome</label><input type="text" placeholder="Seu nome" required style="width:100%;background:var(--white);border:1px solid var(--rule);padding:14px 16px;color:var(--ink);font-family:inherit;font-size:.95rem"></div>
+<div><label style="display:block;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:7px">Telefone</label><input type="tel" placeholder="(51) 99999-9999" required style="width:100%;background:var(--white);border:1px solid var(--rule);padding:14px 16px;color:var(--ink);font-family:inherit;font-size:.95rem"></div>
+<div><label style="display:block;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:7px">Serviço de interesse</label><select style="width:100%;background:var(--white);border:1px solid var(--rule);padding:14px 16px;color:var(--ink);font-family:inherit;font-size:.95rem"><option>Selecione...</option><option>Corte Casa</option><option>Barboterapia</option><option>Corte + Barboterapia</option></select></div>
+<div><label style="display:block;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:7px">Mensagem</label><textarea placeholder="Alguma observação?" style="width:100%;background:var(--white);border:1px solid var(--rule);padding:14px 16px;color:var(--ink);font-family:inherit;font-size:.95rem;resize:vertical;min-height:90px"></textarea></div>
+<button type="submit" class="btn" style="align-self:flex-start">Enviar mensagem</button>
+</form>
+</div>
 </div></section>
 
 <section class="cta-final"><div class="wrap">

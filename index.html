@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mustazo Barbearias | Seu estilo, nossa assinatura — Novo Hamburgo</title>
+<meta name="description" content="Corte Casa, Barboterapia e cuidado personalizado na Mustazo Novo Hamburgo. Conheça nossa equipe e agende seu horário pelo WhatsApp.">
+<meta property="og:title" content="Mustazo Barbearias — Novo Hamburgo">
+<meta property="og:description" content="Seu estilo. Nossa assinatura. Conheça a Mustazo e agende seu próximo corte ou barboterapia em Novo Hamburgo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f7f3ec;--paper:#faf7f2;--ink:#1a140e;--dim:#6b5d4f;--gold:#a8823a;--gold-l:#c9a227;--rule:rgba(26,20,14,.14)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Lora',serif;background:var(--cream);color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:900}
+svg{display:block}
+.nav{padding:26px 0;display:flex;justify-content:space-between;align-items:center}
+.nav .lg{font-family:'Playfair Display';font-size:1.15rem;font-weight:900;letter-spacing:.5px;text-decoration:none;color:var(--ink)}
+.nav .lg span{color:var(--gold)}
+.nav .lk{display:flex;gap:26px;align-items:center}
+.nav .lk a{color:var(--dim);text-decoration:none;font-size:.8rem;text-transform:uppercase;letter-spacing:1.8px;transition:.2s}
+.nav .lk a:hover{color:var(--ink)}
+.nav .lk a.cta{border:1px solid var(--ink);color:var(--ink);padding:10px 20px}
+.nav .lk a.cta:hover{background:var(--ink);color:var(--cream)}
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.42) sepia(.18)}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(26,20,14,.25),rgba(26,20,14,.72))}
+.hero .in{position:relative;z-index:2;padding:90px 32px;max-width:780px}
+.hero .k{font-size:.62rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold-l);margin-bottom:26px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.04;margin-bottom:26px;color:var(--paper)}
+.hero h1 i{color:var(--gold-l)}
+.hero p{color:rgba(250,247,242,.88);font-size:1.12rem;font-style:italic;margin-bottom:38px}
+.hero .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--ink);color:var(--cream);padding:16px 36px;text-decoration:none;text-transform:uppercase;letter-spacing:2.5px;font-size:.7rem;transition:.25s}
+.btn:hover{background:var(--gold);color:var(--ink)}
+.btn.ghost{background:transparent;border:1px solid rgba(250,247,242,.5);color:var(--paper)}
+.btn.ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.marq{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:20px 0;overflow:hidden;white-space:nowrap;background:var(--paper)}
+.marq span{display:inline-block;font-family:'Playfair Display';font-size:1.05rem;letter-spacing:3px;text-transform:uppercase;animation:scroll 30s linear infinite}
+.marq i{color:var(--gold);font-style:normal;margin:0 28px}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sec{padding:100px 0}
+.sec .cap{text-align:center;margin-bottom:60px}
+.sec .cap .k{font-size:.6rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px}
+.sec .cap h2{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin-bottom:20px}
+.sec .cap h2 i{color:var(--gold)}
+.sec .cap p{color:var(--dim);max-width:580px;margin:0 auto;font-size:1.05rem}
+.sec .cap .ln{width:46px;height:1px;background:var(--gold);margin:24px auto 0}
+.svc{display:flex;flex-direction:column;gap:0;max-width:760px;margin:0 auto}
+.svc .it{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--rule);min-height:340px}
+.svc .it:first-child{border-top:1px solid var(--rule)}
+.svc .it .im{overflow:hidden}
+.svc .it .im img{width:100%;height:100%;object-fit:cover;filter:sepia(.22);transition:.6s}
+.svc .it:hover .im img{filter:sepia(0);transform:scale(1.04)}
+.svc .it .tx{padding:56px 48px;display:flex;flex-direction:column;justify-content:center}
+.svc .it .tx .tag{font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.svc .it .tx h3{font-size:1.7rem;margin-bottom:12px}
+.svc .it .tx p{color:var(--dim);font-size:.98rem;margin-bottom:24px}
+.svc .it .tx .price{font-family:'Playfair Display';font-size:1.5rem;font-weight:900;color:var(--ink);margin-bottom:20px}
+.svc .it .tx .price small{font-size:.72rem;color:var(--dim);font-family:'Lora';font-weight:400}
+.svc .it .tx a{color:var(--ink);text-decoration:none;font-size:.7rem;text-transform:uppercase;letter-spacing:2.5px;border-bottom:1px solid var(--gold);padding-bottom:4px;align-self:flex-start;transition:.2s}
+.svc .it .tx a:hover{color:var(--gold);border-color:var(--gold)}
+.ess{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.ess .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.ess .im{aspect-ratio:4/5;overflow:hidden}
+.ess .im img{width:100%;height:100%;object-fit:cover;filter:sepia(.25)}
+.ess .tx h2{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.12;margin-bottom:22px}
+.ess .tx h2 i{color:var(--gold)}
+.ess .tx p{color:var(--dim);margin-bottom:18px;font-size:1.02rem}
+.ess .tx ul{list-style:none;margin-top:28px}
+.ess .tx li{padding:12px 0;border-bottom:1px solid var(--rule);font-size:.95rem;color:var(--dim);display:flex;gap:14px;align-items:center}
+.ess .tx li:last-child{border-bottom:none}
+.ess .tx li::before{content:"";width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex-shrink:0}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gal div{aspect-ratio:3/4;overflow:hidden}
+.gal img{width:100%;height:100%;object-fit:cover;filter:sepia(.28);transition:.5s}
+.gal div:hover img{filter:sepia(0);transform:scale(1.05)}
+.team{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.tgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.tgrid .m{text-align:center}
+.tgrid .m .ph{aspect-ratio:3/4;overflow:hidden;margin-bottom:16px}
+.tgrid .m .ph img{width:100%;height:100%;object-fit:cover;filter:sepia(.3);transition:.5s}
+.tgrid .m:hover .ph img{filter:sepia(0)}
+.tgrid .m .n{font-weight:700;font-size:1rem}
+.tgrid .m .r{color:var(--dim);font-size:.78rem}
+.local .wrap{text-align:center}
+.local .addr{margin:34px 0 44px}
+.local .addr .rua{font-family:'Playfair Display';font-size:1.5rem;font-weight:900;margin-bottom:8px}
+.local .addr .cid{color:var(--dim);font-size:1rem}
+.local .map{border:1px solid var(--rule);height:360px;overflow:hidden;margin-bottom:40px}
+.local .map iframe{width:100%;height:100%;border:0;filter:grayscale(.35)}
+.local .hrs{display:inline-block;text-align:left}
+.local .hrs .hr{display:flex;justify-content:space-between;gap:60px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:.95rem}
+.local .hrs .hr:last-child{border-bottom:none}
+.local .hrs .hr span:first-child{color:var(--dim);text-transform:uppercase;font-size:.68rem;letter-spacing:2px}
+.local .hrs .hr .cl{color:var(--gold);font-style:italic}
+.local .tel{display:block;margin-top:26px;font-family:'Playfair Display';font-size:1.3rem;font-weight:900;color:var(--ink);text-decoration:none}
+.local .tel:hover{color:var(--gold)}
+.cta-final{text-align:center;padding:110px 0;background:var(--paper);border-top:1px solid var(--rule)}
+.cta-final h2{font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.1;margin-bottom:20px}
+.cta-final h2 i{color:var(--gold)}
+.cta-final p{color:var(--dim);margin-bottom:36px;font-size:1.05rem}
+footer{background:var(--ink);color:var(--cream);padding:60px 0;text-align:center}
+footer .lg{font-family:'Playfair Display';font-size:1.7rem;font-weight:900;margin-bottom:10px}
+footer .lg span{color:var(--gold-l)}
+footer .cn{color:var(--dim);font-size:.78rem;margin-bottom:26px}
+footer .brands{display:flex;justify-content:center;gap:40px;margin-bottom:26px;flex-wrap:wrap}
+footer .brands span{font-size:.66rem;letter-spacing:3px;text-transform:uppercase;color:var(--dim)}
+footer .r{color:var(--dim);font-size:.72rem}
+footer .r a{color:var(--dim);text-decoration:none}
+footer .r a:hover{color:var(--gold-l)}
+@media(max-width:860px){
+.nav .lk a:not(.cta){display:none}
+.svc .it{grid-template-columns:1fr;min-height:auto}
+.svc .it .im{height:280px}
+.svc .it .tx{padding:40px 26px}
+.ess .wrap{grid-template-columns:1fr;gap:40px}
+.gal{grid-template-columns:1fr 1fr}
+.tgrid{grid-template-columns:repeat(3,1fr)}
+.sec{padding:64px 0}
+.hero .in{padding:60px 24px}
+}
+@media(max-width:520px){.gal,.tgrid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<nav class="nav">
+<a href="#" class="lg">MUSTAZO <span>.</span></a>
+<div class="lk">
+<a href="#servicos">Serviços</a>
+<a href="#essencia">A Mustazo</a>
+<a href="#estilos">Estilos</a>
+<a href="#time">Time</a>
+<a href="#localizacao">Localização</a>
+<a href="https://wa.me/5551998447221?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mustazo%20Novo%20Hamburgo%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="cta">Agendar</a>
+</div>
+</nav>
+</div>
+
+<section class="hero">
+<img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=1800&q=80" alt="Equipe Mustazo atendendo clientes">
+<div class="in">
+<div class="k">Barbearia em Novo Hamburgo</div>
+<h1>Seu estilo.<br><i>Nossa assinatura.</i></h1>
+<p>Mais do que um corte, um momento seu. Técnica, personalidade e cuidado em cada detalhe.</p>
+<div class="btns">
+<a href="https://wa.me/5551998447221?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mustazo%20Novo%20Hamburgo%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="btn">Agendar meu horário</a>
+<a href="#servicos" class="btn ghost">Conhecer os serviços</a>
+</div>
+</div>
+</section>
+
+<div class="marq"><span>PRECISÃO NO CORTE <i>◆</i> PERSONALIDADE NO ESTILO <i>◆</i> CUIDADO EM CADA DETALHE <i>◆</i> ISSO É MUSTAZO <i>◆</i> PRECISÃO NO CORTE <i>◆</i> PERSONALIDADE NO ESTILO <i>◆</i> CUIDADO EM CADA DETALHE <i>◆</i> ISSO É MUSTAZO <i>◆</i></span></div>
+
+<section class="sec" id="servicos"><div class="wrap">
+<div class="cap"><span class="k">O que fazemos</span><h2>Seu próximo visual<br><i>começa aqui.</i></h2>
+<p>Do clássico ao contemporâneo. Encontre o cuidado que combina com você.</p></div>
+<div class="svc">
+<div class="it">
+<div class="im"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80" alt="Corte Casa na Mustazo"></div>
+<div class="tx">
+<span class="tag">Identidade</span>
+<h3>Corte Casa</h3>
+<p>Seu estilo, na medida certa. Corte personalizado e finalização com atenção a cada detalhe.</p>
+<div class="price">R$ 60 <small>/ a partir de</small></div>
+<a href="https://wa.me/5551998447221?text=Quero%20agendar%20Corte%20Casa">Agendar serviço</a>
+</div>
+</div>
+<div class="it">
+<div class="im"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80" alt="Barboterapia na Mustazo"></div>
+<div class="tx">
+<span class="tag">Cuidado</span>
+<h3>Barboterapia</h3>
+<p>Um ritual de cuidado. Modelagem, toalha quente e acabamento para uma barba de respeito.</p>
+<div class="price">R$ 45 <small>/ a partir de</small></div>
+<a href="https://wa.me/5551998447221?text=Quero%20agendar%20Barboterapia">Agendar serviço</a>
+</div>
+</div>
+<div class="it">
+<div class="im"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=900&q=80" alt="Corte + Barboterapia na Mustazo"></div>
+<div class="tx">
+<span class="tag">Experiência completa</span>
+<h3>Corte + Barboterapia</h3>
+<p>A experiência completa. Cabelo e barba em sintonia para renovar sua presença.</p>
+<div class="price">R$ 95 <small>/ a partir de</small></div>
+<a href="https://wa.me/5551998447221?text=Quero%20agendar%20Corte%20%2B%20Barboterapia">Agendar serviço</a>
+</div>
+</div>
+</div>
+</div></section>
+
+<section class="sec ess" id="essencia"><div class="wrap">
+<div class="im"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1000&q=80" alt="Atendimento no ambiente da Mustazo"></div>
+<div class="tx">
+<div class="cap" style="text-align:left;margin-bottom:26px"><span class="k">A essência Mustazo</span>
+<h2>O corte é só<br><i>o começo.</i></h2></div>
+<p>A gente acredita que cuidar do visual também é cuidar de si. Por isso, cada visita à Mustazo une técnica, uma boa conversa e aquele tempo que é só seu.</p>
+<p>Um ambiente acolhedor, um time que entende de estilo e atenção do início ao último detalhe. Chegue, sinta-se em casa e saia ainda mais você.</p>
+<ul>
+<li>Profissionais qualificados</li>
+<li>Cuidado personalizado</li>
+<li>Ambiente acolhedor</li>
+<li>Boa conversa, sempre</li>
+</ul>
+</div>
+</div></section>
+
+<section class="sec" id="estilos"><div class="wrap">
+<div class="cap"><span class="k">Cortes & estilos</span><h2>Não é só cabelo.<br><i>É identidade.</i></h2>
+<p>Gente real. Estilo próprio. Um pouco do que acontece por aqui.</p></div>
+<div class="gal">
+<div><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=700&q=80" alt="Detalhes"></div>
+<div><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=700&q=80" alt="Estilo"></div>
+<div><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700&q=80" alt="Precisão"></div>
+<div><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700&q=80" alt="Cuidado"></div>
+</div>
+</div></section>
+
+<section class="sec team" id="time"><div class="wrap">
+<div class="cap"><span class="k">Quem cuida do seu estilo</span><h2>Mãos experientes.<br><i>Pessoas de verdade.</i></h2>
+<p>Conheça o time que faz a experiência Mustazo acontecer.</p></div>
+<div class="tgrid">
+<div class="m"><div class="ph"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80" alt="Lorran"></div><div class="n">Lorran</div><div class="r">Barbeiro</div></div>
+<div class="m"><div class="ph"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80" alt="Aline"></div><div class="n">Aline</div><div class="r">Barbeira</div></div>
+<div class="m"><div class="ph"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=80" alt="John"></div><div class="n">John</div><div class="r">Barbeiro</div></div>
+<div class="m"><div class="ph"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=80" alt="Daniel"></div><div class="n">Daniel</div><div class="r">Barbeiro</div></div>
+<div class="m"><div class="ph"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&q=80" alt="Filipe"></div><div class="n">Filipe</div><div class="r">Barbeiro</div></div>
+</div>
+</div></section>
+
+<section class="sec local" id="localizacao"><div class="wrap">
+<div class="cap"><span class="k">Te esperamos por aqui</span><h2>Seu novo ponto<br><i>de encontro.</i></h2>
+<p>No coração de Vila Rosa, em Novo Hamburgo. Passe por aqui. Vai ser um prazer receber você.</p></div>
+<div class="addr">
+<div class="rua">Rua Avaí, 172 — Vila Rosa</div>
+<div class="cid">Novo Hamburgo — RS · 93315-090</div>
+</div>
+<div class="map">
+<iframe src="https://www.google.com/maps?q=R.+Ava%C3%AD,+172+-+Vila+Rosa,+Novo+Hamburgo+-+RS&output=embed" loading="lazy"></iframe>
+</div>
+<div class="hrs">
+<div class="hr"><span>Segunda-feira</span><span>14h às 20h</span></div>
+<div class="hr"><span>Terça a sexta</span><span>9h às 20h</span></div>
+<div class="hr"><span>Sábado</span><span>8h às 17h</span></div>
+</div>
+<a href="tel:+5551998447221" class="tel">(51) 99844-7221</a>
+</div></section>
+
+<section class="cta-final"><div class="wrap">
+<h2>Seu melhor estilo<br><i>tem hora marcada.</i></h2>
+<p>Escolha seu serviço e deixe o resto com a gente.</p>
+<a href="https://wa.me/5551998447221?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mustazo%20Novo%20Hamburgo%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="btn">Agendar meu horário</a>
+</div></section>
+
+<footer>
+<div class="wrap">
+<div class="lg">MUSTAZO <span>.</span></div>
+<div class="cn">Cabelo, barba e personalidade. Mustazo Barbearias · Novo Hamburgo</div>
+<div class="brands"><span>KEUNE</span><span>VALENTO MEN</span><span>B.URB</span></div>
+<div class="r">© 2026 Mustazo Barbearias. Todos os direitos reservados. · CNPJ 59.888.860/0001-56</div>
+</div>
+</footer>
+
+</body>
+</html>
